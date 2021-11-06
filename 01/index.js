@@ -32,6 +32,5 @@ const error = (err) => {
 const req = new XMLHttpRequest();
 req.onload = success; // req.addEventListener('load', success);
 req.onerror = error; // req.addEventListener('error', error);
-
 req.open('GET', API_URL);
 req.send();
