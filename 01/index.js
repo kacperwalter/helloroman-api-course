@@ -2,7 +2,7 @@ const API_URL = 'https://api.punkapi.com/v2/beers';
 const container = document.querySelector('.container');
 
 const render = (data) => {
-  if (!data.length) return;
+  if (!data.length) return; // prevents running function if data is empty
   const fragment = document.createDocumentFragment();
   data.forEach(({ name, tagline, description, image_url: imageURL }) => {
     const div = document.createElement('div');
@@ -17,7 +17,6 @@ const render = (data) => {
     `;
     fragment.appendChild(div);
   });
-
   container.appendChild(fragment);
 };
 
